@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: #04344c;
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar .left-section {
+    width: 10%;
+    text-align: center;
+     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo p{
+    font-size: 0.5rem;
+}
+.navbar .left-section i {
+    font-size: 2.3rem;
+    color: aliceblue;
+}
+
+.navbar .middle-section {
+    width: 30%;
+
+}
+
+.navbar .middle-section .nav {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+     color: white;
+    font-size: 1.3rem;
+    justify-content: space-around;
+}
+.navbar .middle-section .nav  a{
+  color: white;
+   text-decoration: none;
+}
+
+.navbar .right-section{
+      display: flex;
+    align-items: center;
+    justify-content: space-around;
+width: 10%;
+}
+
+.right-section button{
+    padding: 9px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #34afed;
+    font-size:1.2rem ;
+    
+
+}
+main {
+    height: 83vh;
+    background: url("img.jpg") no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.6);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+}
+main h1{
+    font-size: 3.8rem;
+    color:#04344c;
+}
+main p{
+    font-size: 1.3rem;
+}
+main button{
+    width: 150px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #044d72;
+    color: white;
+}
+footer{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #04344c;
+    color: #34afed;
+}
+.navbar .middle-section .nav  a:hover{
+    color: #0e7cb3;
+}
+button:hover{
+    background-color: #0f76ad;
+      transition: transform 0.3s ease;
+}
