@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task -1</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+    .contact-section {
+  padding: 60px 20px;
+  background-color: #e6f2ff;
+  text-align: center;
+  height: 82vh;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #0b3d91;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #06407a;
+}
+
+/* ✅ Responsive */
+@media (max-width: 600px) {
+  .contact-form {
+    width: 90%;
+  }
+}
+
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="left-section">
+                <div class="logo">
+                   <h2>TraveL</h2>
+                   <p>GO WHERE YOU WANT TO GO</p>
+                </div>
+            </div>
+            <div class="middle-section">
+                <div class="nav">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <button>Call me</button>
+            </div>
+        </div>
+    </header>
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Have questions or want to plan your next trip? Reach out to us!</p>
+  
+  <form class="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Travel. All rights reserved.</p>
+</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
