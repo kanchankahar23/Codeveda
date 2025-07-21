@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVista📑</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html,
+    body {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+
+    nav {
+        height: 12vh;
+        width: 100%;
+        background-color: #2C3E50;
+        color: #3498DB;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        color: #ECF0F1;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: #3498DB;
+        ;
+    }
+
+    .signup {
+        padding: 6px;
+        background-color: #F39C12;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .signup:hover {
+        background-color: #fcd698;
+    }
+nav input {
+    padding: 10px 15px;
+    width: 360px;
+    max-width: 80%;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    
+}
+
+
+    nav img {
+        height: 14vh;
+        width: 14vh;
+    }
+
+    nav h1 {
+        margin-right: 390px;
+        font-size: 1.2rem;
+        color: #F39C12;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+
+    .backgroundimg {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    .backgroundimg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
+        display: block;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FDFEFE;
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Optional overlay */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .book {
+        background-color: #364c62;
+        padding: 10px 10px;
+        max-height: 490vh;
+    }
+
+    .book-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .book-card {
+        background-color: #ecf0f1;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease-out;
+    }
+
+    .book-card:hover {
+        transform: scale(1.10);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: #d7ebf4;
+    }
+
+    .book-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .book-card h3 {
+        font-size: 1rem;
+        margin: 10px 0 5px;
+    }
+
+    .book-card p {
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+
+    .footer {
+        background-color: #2C3E50;
+        color: #ECF0F1;
+        padding: 50px 20px 20px;
+        font-family: Arial, sans-serif;
+       
+
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .footer-section {
+        flex: 1 1 250px;
+        margin: 10px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        margin-bottom: 15px;
+        color: #F1C40F;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li a {
+        text-decoration: none;
+        color: #ECF0F1;
+        display: block;
+        margin: 6px 0;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: #3498DB;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        color: #F1C40F;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 16px;
+        color: #BDC3C7;
+        border-top: 1px solid #7F8C8D;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <img src="booklogo.png">
+            <h1>BookVista📑</h1>
+
+            <input type="text" id="searchInput" placeholder="Search:">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">Explore</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="login.html" target="_blank">LogIn</a>
+            <button class="signup">Sign Up</button>
+        </nav>
+    </header>
+    <main>
+        <div class="backgroundimg">
+            <img src="bg.png">
+            <div class="hero-text">
+                <h2>Welcome to BookVista📚</h2>
+                <p>Discover. Compare. Read.</p>
+            </div>
+        </div>
+    </main>
+    <div class="book">
+
+        <div class="book-container" id="results">
+            <div class="book-card">
+  <img src="Atomic_habits.jpg" alt="Book 1">
+  <h3>Atomic Habits</h3>
+  <p>By James Clear</p>
+  <p>Build good habits and break bad ones using proven methods.</p>
+</div>
+
+<div class="book-card">
+  <img src="the-alchemist.webp" alt="Book 2">
+  <h3>The Alchemist</h3>
+  <p>By Paulo Coelho</p>
+  <p>A magical story of following your dreams.</p>
+</div>
+
+<div class="book-card">
+  <img src="IKIGAIBOOK.png" alt="Book 3">
+  <h3>Ikigai</h3>
+  <p>By Héctor García</p>
+  <p>The Japanese secret to a long and happy life.</p>
+</div>
+
+<div class="book-card">
+  <img src="rich.jpg" alt="Book 4">
+  <h3>Rich Dad Poor Dad</h3>
+  <p>By Robert Kiyosaki</p>
+  <p>What the rich teach their kids about money.</p>
+</div>
+<div class="book-card">
+  <img src="the-7-habits-of-highly-effective-people-.jpg" alt="Book 4">
+  <h3>"the 7 habits of highly effective people</h3>
+  <p>By Stephen R. Covey</p>
+</div>
+<div class="book-card">
+  <img src="grit.jpg" alt="Book 4">
+  <h3>Grit</h3>
+  <p>By Angela Duckworth</p>
+  <p>the power of passion and perserverance</p>
+</div>
+
+<div class="book-card">
+  <img src="the power.jpg" alt="Book 5">
+  <h3>The Power of Your Subconscious Mind</h3>
+  <p>Joseph Murphy</p>
+</div>
+
+<div class="book-card">
+  <img src="wing-of-fire.jpg" alt="Book 6">
+  <h3>Wings of Fire</h3>
+  <p>By A.P.J Abdul Kalam</p>
+  <p>An inspiring autobiography of India's Missile Man.</p>
+</div>
+
+<div class="book-card">
+  <img src="https://covers.openlibrary.org/b/id/11214083-L.jpg" alt="Book 7">
+  <h3>Do Epic Shit</h3>
+  <p>By Ankur Warikoo</p>
+  <p>Life lessons from a creator and entrepreneur.</p>
+</div>
+
+<div class="book-card">
+  <img src="art of letting go.jpg" alt="Book 8">
+  <h3>The Art of Letting Go</h3>
+  <p>By Nick Trenton</p>
+  <p>A Self-Help Guide to Emotional Freedom, Inner Peace & Overcoming Anxiety</p>
+</div>
+<div class="book-card">
+  <img src="the secret.jpg" alt= "book 8">
+  <h3>The secret</h3>
+  <p>By Rhonda Byrne</p>
+  <p>A Law of attraction</p>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>BookVista📑</h3>
+                <p>Your trusted source to search, compare, and discover books worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search Books</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BookVista📑. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>

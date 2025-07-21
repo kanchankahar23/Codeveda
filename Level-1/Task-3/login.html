@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookVista 📑 - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h1>BookVista 📑</h1>
+      <form onsubmit="login(event)" autofill = "off">
+        <h2>Welcome</h2>
+        <p>Please enter your details to sign in</p>
+
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" placeholder="you@example.com" required><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" placeholder="••••••••" required><br>
+
+        <button type="submit">Sign In</button>
+        <button type="button" class="google">Sign in with Google</button>
+
+
+      </form>
+    </div>
+    <div class="right">
+      <h1>“A room without books is like a body without a soul.”<br> — Cicero</h1>
+    </div>
+  </div>
+
+</body>
+<script>
+  window.onload = function () {
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  };
+  function login(event) {
+    event.preventDefault(); 
+
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    if (email !== "" && password !== "") {
+    
+      window.location.href = "home.html"; 
+      emailInput.value = "";
+      passwordInput.value = "";
+    } else {
+      alert("Invalid username or password ❌");
+    }
+  }
+</script>
+
+</html>
