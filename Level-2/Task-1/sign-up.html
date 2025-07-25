@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LearnUp - Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: radial-gradient(circle, black 60%, purple 100%, pink 100%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .signup-box {
+      background: #fff;
+      color: #222;
+      padding: 2.2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .signup-box .logo {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: rgb(187, 47, 187);
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: rgb(187, 47, 187);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: rgb(187, 47, 187);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgb(140, 24, 140);
+    }
+
+    .extra {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .extra a {
+      color: rgb(187, 47, 187);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-box">
+    <div class="logo"><i class="fa-solid fa-school"></i> LearnUp</div>
+    <h2>Create Your Account</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@mail.com" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Create Password</label>
+        <input type="password" id="password" placeholder="Minimum 6 characters" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Re-type your password" required />
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <div class="extra">
+      Already have an account? <a href="sign-in.html">Sign In</a>
+    </div>
+  </div>
+
+</body>
+</html>
