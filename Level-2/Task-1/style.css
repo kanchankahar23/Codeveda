@@ -226,6 +226,10 @@ background-color: #fdf7f7
   background-color: rgb(185, 23, 185);
   color: #fff;
 }
+.mem-head a{
+  text-decoration: none;
+  color: white;
+}
 .feature p{
   font-weight: 700;
 }
