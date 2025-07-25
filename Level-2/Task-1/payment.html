@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4b0082;
+      margin-bottom: 30px;
+    }
+
+    .payment-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .payment-form label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .payment-form input,
+    .payment-form select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .payment-form button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #8a2be2;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .payment-form button:hover {
+      background-color: #6b1bb4;
+    }
+
+    .success {
+      text-align: center;
+      color: green;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .payment{
+   max-width: 600px;
+      margin: 70px auto;
+      background-color: #fff;
+      color: #6b1bb4;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Choose Your Plan & Proceed to Payment</h2>
+
+    <form class="payment-form" id="paymentForm">
+      <label for="plan">Select Plan:</label>
+      <select id="plan" name="plan" required>
+        <option value="">-- Select Plan --</option>
+        <option value="basic">Basic Plan - $19/month</option>
+        <option value="pro">Pro Plan - $49/month</option>
+        <option value="premium">Premium Plan - $99/month</option>
+      </select>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="card">Card Number:</label>
+      <input type="text" id="card" name="card" required placeholder="1234 5678 9012 3456" maxlength="19">
+
+      <label for="expiry">Expiry Date:</label>
+      <input type="text" id="expiry" name="expiry" required placeholder="MM/YY" maxlength="5">
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="3">
+
+      <button type="submit" onclick="paynow()">Pay Now</button>
+      <div id="message" class="success" style="display: none;">Payment Successful! Thank you.</div>
+    </form>
+  </div>
+  <div class="payment" style="display: none;">
+    
+  </div>
+
+  <script>
+    
+    document.getElementById("paymentForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Simple client-side validation
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const card = document.getElementById("card").value.trim();
+      const expiry = document.getElementById("expiry").value.trim();
+      const cvv = document.getElementById("cvv").value.trim();
+      const plan = document.getElementById("plan").value;
+
+      if (!name || !email || !card || !expiry || !cvv || !plan) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+
+      if (!card.replace(/\s+/g, '').match(cardRegex)) {
+        alert("Enter a valid 16-digit card number.");
+        return;
+      }
+
+      if (!expiry.match(expiryRegex)) {
+        alert("Enter a valid expiry date in MM/YY format.");
+        return;
+      }
+
+      if (!cvv.match(cvvRegex)) {
+        alert("Enter a valid 3-digit CVV.");
+        return;
+      }
+
+      // Simulate payment success
+      document.getElementById("message").style.display = "block";
+      this.reset(); 
+    });
+    function paynow() {
+  const container = document.querySelector('.container');
+  if (container) container.remove();
+
+  const payment = document.querySelector(".payment");
+  if (payment) {
+    payment.style.display = "block";
+    payment.innerHTML = `
+      <div class="success-container">
+        <h1>🔐 Payment Done Securely ✅💵</h1>
+      </div>
+    `;
+  }
+}
+
+  </script>
+</body>
+</html>
