@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(195, 80, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    margin: 10rem;
+    padding: 40px;
+ max-width: 800px;
+ background-color: white;
+ border-radius: 10px;
+
+}
+.addtask{
+    max-width: 800px;
+    padding: 10px;
+
+}
+.addtask input{
+   width: 320px;
+   background-color: rgb(230, 228, 228);
+   padding: 10px;
+   border-radius:10px;
+   color: black;
+   font-size: 1rem;
+   
+
+}
+button{
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgb(222, 61, 61);
+    color: white;
+     outline: 0;
+  border: 0;
+  margin-left: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.tasklist{
+    padding: 25px;
+    max-height: 300px;
+}
+.tasklist li{
+    font-size: 1.5rem;
+    font-weight: 530;
+     list-style: none;
+}
+.checkbox{
+    margin-right: 9px
+}
+span{
+    margin-left: 20px;
+}
+span i{
+    color: black;
+}
